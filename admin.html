@@ -97,17 +97,17 @@
 
   /* Sidebar */
 #sidebar{
-  position: fixed;
-  top: 60px;     /* height of your top bar */
-  bottom: 0;     /* this is the magic */
-  left: 0;
   width:240px;
   min-width:240px;
   background:var(--surface);
   border-right:1px solid var(--border);
   display:flex;
   flex-direction:column;
-  overflow-y:auto;
+  height:100vh;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  position:sticky;
+  top:0;
 }
   transition-header{
     padding:1.5rem;
@@ -1561,6 +1561,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
 </script>
 </body>
 </html>
+
 
 
 

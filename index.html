@@ -676,7 +676,7 @@
       <span id="hero-lastname">David</span>
     </h1>
     <p class="hero-bio" id="hero-bio">
-      Data Analyst with a passion for transforming raw datasets into actionable insight. Specializing in predictive modeling, interactive dashboards, and storytelling through data.
+      Data Analyst with a passion for transforming raconsts into actionable insight. Specializing in predictive modeling, interactive dashboards, and storytelling through data.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
@@ -930,7 +930,7 @@ function renderSkills() {
 // ─── Projects ────────────────────────────────────────────
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
-  const projects = data.projects || [];
+  const projects = (data.projects || []).filter(p => !p.hidden);
 
   if (!projects.length) {
     grid.innerHTML = `
@@ -1029,6 +1029,7 @@ document.getElementById('footer-year').textContent = `© ${new Date().getFullYea
 </body>
 
 </html>
+
 
 
 

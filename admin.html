@@ -1140,7 +1140,10 @@ let editingIndex = funon navigate(page) {
   if (page === 'add-project' && editingIndex === -1) resetProjectForm();
   if (page === 'profile') loadProfileForm();
   if (page === 'settings') loadSettingsForm();
-  if (page === 'messages') { renderMessages(); markAllSeen();loadProfileFormquerySelectorAll('[data-page]').forEach(el => {
+  if (page === 'messages') { renderMessages(); updateMsgBadge(); }
+}
+
+document.querySelectorAll('[data-page]').forEach(el => {
   el.addEventListener('click', () => navigate(el.dataset.page));
 });
 
@@ -1669,6 +1672,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
 </script>
 </body>
 </html>
+
 
 
 

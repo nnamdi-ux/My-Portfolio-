@@ -1012,6 +1012,25 @@ function observe() {
 // ─── Form ────────────────────────────────────────────────
 document.getElementById('contact-form').onsubmit = function(e) {
   e.preventDefault();
+  const inputs = this.querySelectorAll('input, textarea');
+  const name    = inputs[0].value.trim();
+  const email   = inputs[1].value.trim();
+  const subject = inputs[2].value.trim();
+  const message = inputs[3].value.trim();
+  if (!name || !email || !message) return;
+
+  // Save message to localStorage
+  try {
+    const msgs = JSON.parse(localStorage.getItem('da_messages') || '[]');
+    msgs.push({
+      id: Date.now(),
+      name, email, subject, message,
+      date: new Date().toLocaleString(),
+      read: false
+    });
+    localStorage.setItem('da_messages', JSON.stringify(msgs));
+  } catch(e) {}
+
   const btn = this.querySelector('.form-btn');
   btn.textContent = '✓ Message Sent';
   btn.style.background = '#4ade80';
@@ -1028,6 +1047,7 @@ document.getElementById('footer-year').textContent = `© ${new Date().getFullYea
 </body>
 
 </html>
+
 
 
 

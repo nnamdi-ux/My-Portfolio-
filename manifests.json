@@ -1,0 +1,17 @@
+{
+  "name": "Dashboard",
+  "short_name": "Dashboard",
+  "description": "Data Analyst Portfolio",
+  "start_url": "/Portfolio/Portfolio.html",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#f5a623",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

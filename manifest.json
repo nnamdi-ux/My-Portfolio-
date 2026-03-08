@@ -1,0 +1,17 @@
+{
+  "name": "DA Portfolio",
+  "short_name": "DA Portfolio",
+  "description": "Data Analyst Portfolio",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#f5a623",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
